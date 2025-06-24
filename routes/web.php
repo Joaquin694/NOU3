@@ -24,6 +24,8 @@ Route::resource('productos', ProductoController::class);
 Route::resource('ventas', VentaController::class);
 Route::resource('detalle-ventas', DetalleVentaController::class);
 Route::resource('movimiento-inventarios', MovimientoInventarioController::class);
+// Ruta para vista de impresión
+Route::get('ventas/{venta}/print', [VentaController::class, 'print'])->name('ventas.print');
 
 // Dashboard
 Route::get('/dashboard', function () {
